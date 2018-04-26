@@ -902,6 +902,7 @@ int RtmpOSFileRead(RTMP_OS_FD osfd, char *pDataPtr, int readLen)
 		return osfd->f_op->read(osfd, pDataPtr, readLen, &osfd->f_pos);
 	} else {
 		DBGPRINT(RT_DEBUG_ERROR, ("no file read method\n"));
+		return vfs_read(osfd, pDataPtr, readLen, &osfd->f_pos);
 		return -1;
 	}
 }

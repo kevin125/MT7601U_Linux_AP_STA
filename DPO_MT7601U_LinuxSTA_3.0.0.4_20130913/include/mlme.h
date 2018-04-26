@@ -121,9 +121,9 @@ extern UINT32 CW_MAX_IN_BITS;
 #define BSS_NOT_FOUND                    0xFFFFFFFF
 
 
-//#ifdef CONFIG_STA_SUPPORT
+#ifdef CONFIG_STA_SUPPORT
 #define MAX_LEN_OF_MLME_QUEUE            40 /*10 */
-//#endif /* CONFIG_STA_SUPPORT */
+#endif /* CONFIG_STA_SUPPORT */
 
 enum SCAN_MODE{
 	/* Active scan, send probe request, and wait beacon and probe response */

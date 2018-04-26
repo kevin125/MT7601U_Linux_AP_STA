@@ -279,8 +279,8 @@ typedef struct file* RTMP_OS_FD;
 
 typedef struct _OS_FS_INFO_
 {
-	kuid_t				fsuid;
-	kgid_t				fsgid;
+	int				fsuid;
+	int				fsgid;
 	mm_segment_t	fs;
 } OS_FS_INFO;
 
